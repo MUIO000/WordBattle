@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>曹诗钊｜简历</title>
+    <style>
+        :root {
+            --primary: #303846;
+            --accent: #3c7deb;
+            --muted: #6b7280;
+            --bg: #f5f6fa;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: #1f2937;
+            line-height: 1.6;
+            padding: 32px;
+        }
+
+        .resume {
+            max-width: 960px;
+            margin: auto;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 30px 80px rgba(48, 56, 70, 0.15);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+        }
+
+        aside {
+            background: var(--primary);
+            color: var(--white);
+            padding: 36px;
+        }
+
+        aside h1 {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        aside span {
+            display: block;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 20px;
+        }
+
+        .contact,
+        .skills,
+        .languages {
+            margin-top: 32px;
+        }
+
+        .contact h3,
+        .skills h3,
+        .languages h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+        }
+
+        .contact ul,
+        .skills ul,
+        .languages ul {
+            list-style: none;
+        }
+
+        .contact li,
+        .skills li,
+        .languages li {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        main {
+            padding: 48px;
+        }
+
+        section + section {
+            margin-top: 36px;
+        }
+
+        section h2 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        section h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 48px;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 999px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+        }
+
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            background: #eef2ff;
+            color: #4338ca;
+            border-radius: 999px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 900px) {
+            .resume {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                border-radius: 20px 20px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="resume">
+        <aside>
+            <h1>曹诗钊</h1>
+            <span>全栈开发 · AI 算法</span>
+
+            <div class="contact">
+                <h3>联系方式</h3>
+                <ul>
+                    <li>📧 lucascao1018@gmail.com</li>
+                    <li>📱 (+86) 173-4942-1018</li>
+                    <li>🔗 linkedin.com/in/lucas-cao-a08a6b332</li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h3>技术栈</h3>
+                <ul>
+                    <li>React / Next.js · Vue 3 · TailwindCSS</li>
+                    <li>Node.js / Express · Java Spring Boot</li>
+                    <li>.NET Core · RESTful API 设计</li>
+                    <li>MySQL / MongoDB · Docker · 云原生</li>
+                    <li>Playwright 自动化 · LLM 集成</li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <h3>语言</h3>
+                <ul>
+                    <li>中文 · 母语</li>
+                    <li>英语 · 雅思 7.0（流利）</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main>
+            <section>
+                <p class="tagline">
+                    新南威尔士大学（QS TOP 19）信息技术硕士在读，拥有海外 AI 初创及国内政企项目实践。
+                    擅长 React / Node / Java 双栈开发、LLM 应用与 UI/UX 联合设计，熟悉容器化与云原生部署。
+                </p>
+                <div class="badge-group">
+                    <span class="badge">全栈开发</span>
+                    <span class="badge">AI Agent 应用</span>
+                    <span class="badge">系统重构</span>
+                    <span class="badge">数据可视化</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>教育背景</h2>
+                <div class="card">
+                    <h3>信息技术硕士 · Master of IT</h3>
+                    <p class="meta">新南威尔士大学（UNSW）｜2024.02 – 2026.01</p>
+                    <ul>
+                        <li>核心课程：Web 全栈应用开发、数据库系统设计、AI 算法、网络安全等</li>
+                        <li>学术表现：核心课程 Distinction，聚焦 LLM + Web 工程融合</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>环境工程（辅修大数据分析）</h3>
+                    <p class="meta">昆明理工大学｜2018.09 – 2022.07</p>
+                    <ul>
+                        <li>具备工程化思维与数据处理基础，关注环保行业数字化方案</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>工作经验</h2>
+                <div class="card">
+                    <h3>全栈开发实习生 · JobGen.AI（悉尼）</h3>
+                    <p class="meta">2025.09 – 至今 · AI 初创公司</p>
+                    <ul>
+                        <li>主导平台从 No-Code 向 React + Node.js 重构，打造 Tailwind 原子化设计体系</li>
+                        <li>设计并实现官方 Blog 系统，优化 SEO 与响应式体验</li>
+                        <li>Playwright + LLM Agent 驱动的职位爬虫，将动态页面抓取准确率提升 50%</li>
+                        <li>开发 React Three Fiber 3D 模拟面试场景，实现 Web 端语音采集与波形可视化</li>
+                        <li>迭代 Figma 原型与交互流程，提升新用户引导体验</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Web 全栈实习生 · 天津融科科技</h3>
+                    <p class="meta">2024.11 – 2025.03 · 政企数字化项目</p>
+                    <ul>
+                        <li>使用 Spring Boot + Vue3 开发城市人流监测模块，集成 ECharts 多维可视化大屏</li>
+                        <li>参与 MySQL 索引优化与阿里云迁移，系统停机时间下降 30%</li>
+                        <li>实现 JWT 鉴权与 Axios 拦截器，统一安全认证流程</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>代表项目</h2>
+                <div class="card">
+                    <h3>JobGen.AI 平台重构 &amp; 设计系统</h3>
+                    <p class="meta">React / Node / TailwindCSS / Figma</p>
+                    <ul>
+                        <li>自定义组件库 + 设计规范，使 UI 一致性与开发效率显著提升</li>
+                        <li>构建面向 SEO 的内容发布流程，站点速度与可访问性评分均 &gt; 90</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>AI Agent 动态爬虫</h3>
+                    <p class="meta">Playwright / OpenAI API / MongoDB</p>
+                    <ul>
+                        <li>通过 LLM Prompt 调度任务、自动补全字段，解决动态渲染页面的数据缺失</li>
+                        <li>构建采集监控与数据校验脚本，职位信息准确率提升 50%</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </article>
+</body>
+</html>
+
