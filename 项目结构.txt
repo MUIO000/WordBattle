@@ -1,0 +1,176 @@
+WordBattleGame/
+│
+├── Assets/
+│   │
+│   ├── Scenes/
+│   │   ├── MainMenu.unity                    [开发顺序: 2]
+│   │   ├── Battle.unity                      [开发顺序: 3]
+│   │   └── Results.unity                     [开发顺序: 24]
+│   │
+│   ├── Scripts/
+│   │   │
+│   │   ├── Data/
+│   │   │   ├── WordData.cs                   [开发顺序: 1]
+│   │   │   ├── UnitData.cs                   [开发顺序: 4]
+│   │   │   ├── LevelData.cs                  [开发顺序: 5]
+│   │   │   └── WordDatabase.cs               [开发顺序: 6]
+│   │   │
+│   │   ├── Core/
+│   │   │   ├── GameManager.cs                [开发顺序: 7]
+│   │   │   ├── VocabularyManager.cs          [开发顺序: 8]
+│   │   │   ├── TimerController.cs            [开发顺序: 9]
+│   │   │   └── AudioManager.cs               [开发顺序: 25]
+│   │   │
+│   │   ├── Battle/
+│   │   │   ├── Unit.cs                       [开发顺序: 10]
+│   │   │   ├── PlayerUnit.cs                 [开发顺序: 11]
+│   │   │   ├── EnemyUnit.cs                  [开发顺序: 12]
+│   │   │   ├── BattleManager.cs              [开发顺序: 13]
+│   │   │   ├── UnitSpawner.cs                [开发顺序: 14]
+│   │   │   ├── AttackController.cs           [开发顺序: 15]
+│   │   │   └── HealthSystem.cs               [开发顺序: 16]
+│   │   │
+│   │   └── UI/
+│   │       ├── MainUIController.cs           [开发顺序: 17]
+│   │       ├── QuestionPanel.cs              [开发顺序: 18]
+│   │       ├── UnitSelectionPanel.cs         [开发顺序: 19]
+│   │       ├── HealthDisplay.cs              [开发顺序: 20]
+│   │       ├── TimerDisplay.cs               [开发顺序: 21]
+│   │       ├── GameResultUI.cs               [开发顺序: 22]
+│   │       └── MainMenuUI.cs                 [开发顺序: 23]
+│   │
+│   ├── Prefabs/
+│   │   │
+│   │   ├── Units/
+│   │   │   ├── Warrior.prefab                [开发顺序: 28]
+│   │   │   ├── Archer.prefab                 [开发顺序: 29]
+│   │   │   ├── Mage.prefab                   [开发顺序: 30]
+│   │   │   └── Boss.prefab                   [开发顺序: 31]
+│   │   │
+│   │   ├── UI/
+│   │   │   ├── OptionButton.prefab           [开发顺序: 32]
+│   │   │   ├── UnitIcon.prefab               [开发顺序: 33]
+│   │   │   ├── HealthBar.prefab              [开发顺序: 34]
+│   │   │   └── DamageText.prefab             [开发顺序: 35]
+│   │   │
+│   │   └── Effects/
+│   │       ├── AttackEffect.prefab           [开发顺序: 36]
+│   │       ├── HitEffect.prefab              [开发顺序: 37]
+│   │       ├── SummonEffect.prefab           [开发顺序: 38]
+│   │       └── DeathEffect.prefab            [开发顺序: 39]
+│   │
+│   ├── Animations/
+│   │   │
+│   │   ├── Units/
+│   │   │   ├── WarriorAnimController.controller   [开发顺序: 40]
+│   │   │   ├── ArcherAnimController.controller    [开发顺序: 41]
+│   │   │   ├── MageAnimController.controller      [开发顺序: 42]
+│   │   │   └── BossAnimController.controller      [开发顺序: 43]
+│   │   │
+│   │   └── UI/
+│   │       ├── ButtonClick.anim              [开发顺序: 44]
+│   │       ├── HealthBarDecrease.anim        [开发顺序: 45]
+│   │       ├── IconUnlock.anim               [开发顺序: 46]
+│   │       └── TimerWarning.anim             [开发顺序: 47]
+│   │
+│   ├── Materials/
+│   │   ├── UnitMaterials/
+│   │   │   ├── WarriorMat.mat                [开发顺序: 48]
+│   │   │   ├── ArcherMat.mat                 [开发顺序: 49]
+│   │   │   ├── MageMat.mat                   [开发顺序: 50]
+│   │   │   └── BossMat.mat                   [开发顺序: 51]
+│   │   │
+│   │   ├── EffectMaterials/
+│   │   │   ├── FireEffect.mat                [开发顺序: 52]
+│   │   │   ├── BloodEffect.mat               [开发顺序: 53]
+│   │   │   └── MagicCircle.mat               [开发顺序: 54]
+│   │   │
+│   │   └── UIMaterials/
+│   │       ├── ButtonGlow.mat                [开发顺序: 55]
+│   │       └── HealthBarGradient.mat         [开发顺序: 56]
+│   │
+│   ├── Textures/
+│   │   ├── UI/
+│   │   │   ├── ButtonNormal.png              [开发顺序: 57]
+│   │   │   ├── ButtonPressed.png             [开发顺序: 58]
+│   │   │   ├── HealthBarFill.png             [开发顺序: 59]
+│   │   │   ├── UnitIcons/
+│   │   │   │   ├── WarriorIcon.png           [开发顺序: 60]
+│   │   │   │   ├── ArcherIcon.png            [开发顺序: 61]
+│   │   │   │   └── MageIcon.png              [开发顺序: 62]
+│   │   │   └── Background.png                [开发顺序: 63]
+│   │   │
+│   │   └── Effects/
+│   │       ├── Particle01.png                [开发顺序: 64]
+│   │       ├── Particle02.png                [开发顺序: 65]
+│   │       └── BloodSplash.png               [开发顺序: 66]
+│   │
+│   ├── Models/
+│   │   ├── Characters/
+│   │   │   ├── Warrior.fbx                   [开发顺序: 67]
+│   │   │   ├── Archer.fbx                    [开发顺序: 68]
+│   │   │   ├── Mage.fbx                      [开发顺序: 69]
+│   │   │   └── Boss.fbx                      [开发顺序: 70]
+│   │   │
+│   │   └── Environment/
+│   │       ├── BattleArena.fbx               [开发顺序: 71]
+│   │       └── Props.fbx                     [开发顺序: 72]
+│   │
+│   ├── Audio/
+│   │   ├── BGM/
+│   │   │   ├── MainMenuBGM.mp3               [开发顺序: 73]
+│   │   │   ├── BattleBGM.mp3                 [开发顺序: 74]
+│   │   │   ├── VictoryBGM.mp3                [开发顺序: 75]
+│   │   │   └── DefeatBGM.mp3                 [开发顺序: 76]
+│   │   │
+│   │   └── SFX/
+│   │       ├── ButtonClick.wav               [开发顺序: 77]
+│   │       ├── CorrectAnswer.wav             [开发顺序: 78]
+│   │       ├── WrongAnswer.wav               [开发顺序: 79]
+│   │       ├── SwordAttack.wav               [开发顺序: 80]
+│   │       ├── ArrowShoot.wav                [开发顺序: 81]
+│   │       ├── MagicCast.wav                 [开发顺序: 82]
+│   │       ├── UnitSummon.wav                [开发顺序: 83]
+│   │       ├── EnemyHit.wav                  [开发顺序: 84]
+│   │       └── UnitDeath.wav                 [开发顺序: 85]
+│   │
+│   └── Resources/
+│       │
+│       ├── Data/
+│       │   ├── WordDatabase_Easy.asset       [开发顺序: 26]
+│       │   ├── WordDatabase_Medium.asset     [开发顺序: 27]
+│       │   ├── WordDatabase_Hard.asset       [开发顺序: 86]
+│       │   └── LevelConfigs/
+│       │       ├── Level01.asset             [开发顺序: 87]
+│       │       ├── Level02.asset             [开发顺序: 88]
+│       │       └── Level03.asset             [开发顺序: 89]
+│       │
+│       └── Localization/
+│           ├── English.json                  [开发顺序: 90]
+│           └── Chinese.json                  [开发顺序: 91]
+│
+└── ProjectSettings/
+    ├── ProjectSettings.asset                 [开发顺序: 92]
+    ├── InputManager.asset                    [开发顺序: 93]
+    ├── TagManager.asset                      [开发顺序: 94]
+    └── QualitySettings.asset                 [开发顺序: 95]
+
+// 
+开发阶段划分
+
+第一阶段 (1-9)：核心架构
+数据结构和基础场景搭建
+第二阶段 (10-16)：战斗系统
+单位系统和战斗逻辑
+第三阶段 (17-23)：UI系统
+所有用户界面和交互
+第四阶段 (24-27)：数据内容
+游戏内容和配置数据
+第五阶段 (28-47)：视觉资源
+预制体、动画和特效
+第六阶段 (48-72)：美术资源
+材质、贴图和模型
+第七阶段 (73-85)：音频资源
+背景音乐和音效
+第八阶段 (86-95)：配置和优化
+最终配置和项目设置
