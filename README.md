@@ -1,73 +1,73 @@
-    # Wordbattle Game (单词大作战)
+# Wordbattle Game
 
-    ## 📖 项目简介 (Introduction)
-    **Wordbattle Game** 是一款结合了**英语词汇学习**与**策略塔防战斗**的 Unity 游戏。玩家扮演召唤师，通过回答英语单词问题来积累能量或触发技能，召唤英雄和士兵与敌人进行对战。游戏旨在让玩家在紧张刺激的战斗中轻松记忆和巩固英语单词。
+## 📖 Introduction
 
-    ## ✨ 核心功能 (Features)
+**Wordbattle Game** is a Unity game that combines **English vocabulary learning** with **strategy tower defense combat**. Players take on the role of a summoner, accumulating energy or triggering skills by answering English word questions, and summoning heroes and soldiers to battle enemies. The game aims to help players easily memorize and reinforce English words through intense and exciting combat.
 
-    ### 1. ⚔️ 策略战斗系统 (Battle System)
-    *   **召唤机制**：通过 `SummonerController` 召唤不同类型的士兵协助战斗。
-    *   **英雄系统**：多位拥有独特技能和属性的英雄可供选择 (`HeroController`)。
-    *   **敌人与Boss**：挑战具有不同攻击模式的普通敌人和强力 Boss (`BossController`, `EnemyUnit`)。
-    *   **自动寻路与攻击**：单位会自动寻找最近的敌人并进行攻击。
+## ✨ Core Features
 
-    ### 2. 📚 英语问答模块 (Vocabulary Learning)
-    *   **答题互动**：游戏的核心驱动力。通过 `VocabularyManager` 和 `QuestionPanel` 实现。
-    *   **题库管理**：`QuestionDatabase` 支持题库的导入、循环出题以及答错题目的复习机制。
-    *   **表现评估**：根据答题准确率和速度进行评级，并在结算时给予奖励。
+### 1. ⚔️ Strategy Battle System
+*   **Summoning Mechanism**: Summon different types of soldiers to assist in battle through `SummonerController`.
+*   **Hero System**: Multiple heroes with unique skills and attributes to choose from (`HeroController`).
+*   **Enemies & Bosses**: Challenge regular enemies and powerful Bosses with different attack patterns (`BossController`, `EnemyUnit`).
+*   **Auto Pathfinding & Attack**: Units automatically find and attack the nearest enemies.
 
-    ### 3. 📈 养成与进阶 (Progression)
-    *   **英雄/士兵列表**：
-        *   在 `HeroList` 和 `SoldierList` 界面查看、解锁和升级你的单位。
-        *   升级系统包含等级限制和金币消耗逻辑。
-    *   **经济系统**：通过战斗获取金币，用于购买更强大的单位。
+### 2. 📚 English Vocabulary Learning Module
+*   **Question-Answer Interaction**: The core driving force of the game. Implemented through `VocabularyManager` and `QuestionPanel`.
+*   **Question Bank Management**: `QuestionDatabase` supports question bank import, cyclic question generation, and review mechanisms for incorrectly answered questions.
+*   **Performance Evaluation**: Rating based on answer accuracy and speed, with rewards given at settlement.
 
-    ### 4. 🛠️ 系统功能 (System Features)
-    *   **登录系统**：完整的登录流程 (`Login.cs`)，包含后端 API 交互及 Swagger 定义支持。
-    *   **平滑加载**：实现了带有进度条和平滑动画的场景加载系统 (`LoadingSceneController`)。
-    *   **UI 交互**：使用 TextMeshPro 提供高质量文本显示，包含丰富的动画效果。
+### 3. 📈 Progression & Advancement
+*   **Hero/Soldier List**:
+    *   View, unlock, and upgrade your units in the `HeroList` and `SoldierList` interfaces.
+    *   The upgrade system includes level restrictions and gold consumption logic.
+*   **Economy System**: Earn gold through battles to purchase more powerful units.
 
-    ## 📂 项目结构 (Project Structure)
+### 4. 🛠️ System Features
+*   **Login System**: Complete login flow (`Login.cs`), including backend API interaction and Swagger definition support.
+*   **Smooth Loading**: Scene loading system with progress bars and smooth animations (`LoadingSceneController`).
+*   **UI Interaction**: Uses TextMeshPro to provide high-quality text display with rich animation effects.
 
-    主要脚本位于 `Assets/Scripts/` 目录下：
+## 📂 Project Structure
 
-    *   **Battle/**: 战斗场景核心逻辑
-        *   `BattleManager.cs`: 战斗流程控制（开始、胜利、失败）。
-        *   `SummonerController.cs`: 召唤师逻辑。
-        *   `Unit.cs`, `HeroController.cs`, `SoldierController.cs`: 单位基类与控制器。
-        *   **Core/**: 
-            *   `GameManager.cs`: 全局游戏管理。
-            *   `VocabularyManager.cs`: 词汇与题目逻辑。
-        *   **Data/**: `QuestionDatabase.cs` (题库), `UnitData.cs` (单位数据)。
-    *   **HeroList/**: 英雄选择与养成界面逻辑。
-    *   **SoldierList/**: 士兵选择与养成界面逻辑。
-    *   **MainMenu/**: 主菜单与登录 (`Login.cs`) 逻辑。
-    *   **UI/** & **Panel/**: 通用 UI 组件与面板逻辑。
+Main scripts are located in the `Assets/Scripts/` directory:
 
-    ## 🚀 快速开始 (Getting Started)
+*   **Battle/**: Core logic for battle scenes
+    *   `BattleManager.cs`: Battle flow control (start, victory, defeat).
+    *   `SummonerController.cs`: Summoner logic.
+    *   `Unit.cs`, `HeroController.cs`, `SoldierController.cs`: Unit base class and controllers.
+    *   **Core/**: 
+        *   `GameManager.cs`: Global game management.
+        *   `VocabularyManager.cs`: Vocabulary and question logic.
+    *   **Data/**: `QuestionDatabase.cs` (question bank), `UnitData.cs` (unit data).
+*   **HeroList/**: Hero selection and progression interface logic.
+*   **SoldierList/**: Soldier selection and progression interface logic.
+*   **MainMenu/**: Main menu and login (`Login.cs`) logic.
+*   **UI/** & **Panel/**: Generic UI components and panel logic.
 
-    ### 环境要求
-    *   **Unity 版本**: 建议使用 2021.3 LTS 或更高版本。
-    *   **依赖包**: 
-        *   `TextMeshPro`: 用于 UI 文本显示。
-        *   `Newtonsoft.Json`: 用于处理 JSON 数据。
+## 🚀 Getting Started
 
-    ### 安装与运行
-    1.  克隆本项目到本地。
-    2.  使用 Unity Hub 添加并打开项目文件夹。
-    3.  如果出现材质或字体丢失，请确保已导入 TextMeshPro 基本资源 (`Window -> TextMeshPro -> Import TMP Essential Resources`)。
-    4.  打开 `Assets/Scenes/Login.unity` (或 `MainMenu.unity`) 场景开始游戏。
+### Requirements
+*   **Unity Version**: Recommended to use 2021.3 LTS or higher.
+*   **Dependencies**: 
+    *   `TextMeshPro`: For UI text display.
+    *   `Newtonsoft.Json`: For handling JSON data.
 
-    ## 🕹️ 玩法说明
-    1.  **登录**：进入游戏，登录账号。
-    2.  **备战**：在主菜单进入英雄或士兵列表，调整出战阵容并升级单位。
-    3.  **战斗**：
-        *   进入战斗场景。
-        *   屏幕下方会出现英语单词选择题。
-        *   **正确答题**：获得召唤资源或触发英雄攻击。
-        *   **召唤单位**：点击底部士兵图标消耗资源召唤援军。
-        *   **胜利条件**：击败关卡 Boss。
+### Installation & Running
+1.  Clone this project to your local machine.
+2.  Use Unity Hub to add and open the project folder.
+3.  If materials or fonts are missing, ensure that TextMeshPro essential resources have been imported (`Window -> TextMeshPro -> Import TMP Essential Resources`).
+4.  Open the `Assets/Scenes/Login.unity` (or `MainMenu.unity`) scene to start the game.
 
-    ---
-    *Created for English Learning & Gaming Fun.*
+## 🕹️ Gameplay Guide
+1.  **Login**: Enter the game and log in to your account.
+2.  **Prepare for Battle**: Enter the hero or soldier list from the main menu, adjust your battle lineup and upgrade units.
+3.  **Combat**:
+    *   Enter the battle scene.
+    *   English word multiple-choice questions will appear at the bottom of the screen.
+    *   **Answer Correctly**: Gain summoning resources or trigger hero attacks.
+    *   **Summon Units**: Click the soldier icons at the bottom to consume resources and summon reinforcements.
+    *   **Victory Condition**: Defeat the stage Boss.
 
+---
+*Created for English Learning & Gaming Fun.*
